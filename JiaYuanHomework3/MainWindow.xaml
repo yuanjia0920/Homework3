@@ -5,15 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JiaYuanHomework3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="400">
     <Grid>
-        <ListView x:Name="uxList">
+        <ListView x:Name="uxList" GridViewColumnHeader.Click="GridViewColumnHeader_Click" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="100">
-                    </GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Password}" Header="Password" Width="100">
-                    </GridViewColumn>
+                    <GridViewColumn  Header="Name" DisplayMemberBinding="{Binding Name}" Width="100"/>
+                    <GridViewColumn  Header="Password" DisplayMemberBinding="{Binding Password}" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
